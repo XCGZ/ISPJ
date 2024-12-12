@@ -1,0 +1,10 @@
+Password: 12345&*()(@	
+Password: 12345&*()(@
+IC: t0514171g	
+Credit Card Number: 4242 4242 4242 4242	
+Credit card: 4242 4242 4242 4242	
+Password: 12345&*()(@
+CVC: 409	
+Cvv: 430
+Cvc:480
+Password: 12345&*()(@

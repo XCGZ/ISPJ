@@ -1,0 +1,54 @@
+name the files baed on filename uploaded. e.g. user uploads dog.pdf. convert pdf to images, name the images dog_page 1.png.
+check file type
+web aapp
+image files, txct file, docx file
+test what if i change font size and other text.
+for docx:
+check if statement using regex. if it matches regex, repalce the text. maybe replace exactly, e.g. dog detected using regex, replace dog with dog in docx.
+reignore, tcxt file doi
+maybe for txt file, make a copy at start, than do everyting on that copy. store og in db.
+
+
+tmr:
+upload page, to retreive user file, store it in db if possible. user flow diagram.
+store the uploaded files in diff directory
+create a new folder everytime theres an upload, create a folder per user?
+options on what to mask
+whjat if have more than one pasword in the img? fixed. what if hav password twice in one line
+finish txt and docx
+masked data stats
+delete file after processing and user has downloaded?
+
+
+features:
+File upload web page
+    - users able to upload files
+    - users can choose what data they want to mask in the file and submit
+    - application processes this
+        - saves the uploaded file to a location to be processed
+        - detect file type
+        - uses regex and ocr technology to detect the specific patterns of the data to be masked
+        - show masking statistics
+    - after processing, user can download the masked file
+summary:
+file upload page
+masking
+regex and ocr technology
+user download masked file
+additional:
+- faced a problem while testing:
+    - the ocr could not detect some text properly. example: detected Password: 12345&*((@ as Password: 12345&. 
+    - this resulted in inaccuracy.
+    - solution is to do preprocessing to the image first before using ocr. Methods for preprocessing: inverting image.
+
+to be implemented
+More preprocessing to ensure better accuracy (binarization, noise removal)
+remove geolocation tags on photos.
+add more masking options. improve the detection and the masking. training ocr model to fit my use case.
+tokenization combined with aws kms. i will store the tokens in secure dbms and map to aws kms. temporarily erncrypt the files thats uploaded to ensure secure processing and storing on application.
+file integrity assurance. similar to what many iso files have.
+bluetooth range
+none masking option (require them to select an option. otherwise they use the service for no reason.)
+refine regex
+virustotal file upload
+https/production mode

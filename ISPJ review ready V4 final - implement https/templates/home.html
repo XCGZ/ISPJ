@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+
+<h1 class="display-4">Home Page</h1>
+<a href="{{ url_for('file_upload') }}" class="btn btn-primary">File Upload</a>
+{% endblock %}
+
+{$ endblock %}
